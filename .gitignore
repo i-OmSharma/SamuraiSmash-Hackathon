@@ -42,7 +42,6 @@ Thumbs.db
 *.tmp
 
 # Dependencies
-package-lock.json
 yarn.lock
 
 # Misc
