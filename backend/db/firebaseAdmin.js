@@ -1,5 +1,5 @@
 import admin from "firebase-admin"
-import serviceAccount from "../config/dumb-deaf-firebase-adminsdk-88qen-02e01bdc38.json"
+import serviceAccount from "../config/dumb-deaf-firebase-adminsdk-88qen-bd746675ad.json" with {type: 'json'}
 
 //Firebase Admin
 
