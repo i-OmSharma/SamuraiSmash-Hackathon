@@ -17,6 +17,10 @@ app.use(express.json());
 connectDB();
 
 // Routes
+app.get("/", (req, res) => {
+  res.send(">>>")
+})
+
 app.use('/api/auth', authRoutes);
 
 // Start server
