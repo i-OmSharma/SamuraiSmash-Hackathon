@@ -1,18 +1,17 @@
 // src/components/ProtectedRoute.jsx
+import { Navigate } from 'react-router-dom';
+import { useAuth } from '../context/authContext'; // Assuming you have an auth context
 
-import { Navigate } from "react-router-dom";
-import { useAuth } from "../context/authContext"; // Access the user state
-
+// eslint-disable-next-line react/prop-types
 const ProtectedRoute = ({ children }) => {
-  const { user } = useAuth();  // Get user from auth context
+  const { user } = useAuth(); // Get user from context or state
 
-  // If no user is logged in, redirect to SignIn page
   if (!user) {
-    return <Navigate to="/signin" />;
+    // If no user is logged in, redirect to SignIn page
+    return <Navigate to="/" />;
   }
 
-  // If the user is authenticated, render the children (protected page)
-  return children;
+  return children; // Render the protected page if the user is logged in
 };
 
 export default ProtectedRoute;
