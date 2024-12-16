@@ -1,0 +1,19 @@
+/* ProgressStreak.css */
+
+/* Animation for the circular progress bars */
+.circle-container {
+    animation: scaleIn 0.5s ease-in-out forwards;
+  }
+  
+  /* Keyframes for the scaling animation */
+  @keyframes scaleIn {
+    0% {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  

@@ -1,0 +1,9 @@
+
+/* Override specific styles if needed */
+.form-control {
+    padding-left: 60px; /* Apply padding for icons */
+  }
+  
+  button.btn-custom {
+    background-color: #4e63d7; /* Custom color */
+  }
