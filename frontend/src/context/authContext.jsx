@@ -1,12 +1,13 @@
 // src/context/authContext.js
 
-import React, { createContext, useState, useContext, useEffect } from "react";
+import { createContext, useState, useContext, useEffect } from "react";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 // Create a context to manage user authentication state
 const AuthContext = createContext();
 
 // AuthProvider component to provide the authentication state to the app
+// eslint-disable-next-line react/prop-types
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
