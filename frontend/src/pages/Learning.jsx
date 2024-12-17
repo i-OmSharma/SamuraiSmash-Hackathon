@@ -1,34 +1,25 @@
-import SubjectCard from '../components/cards/SubjectCard';
-import ProgressStreak from '../components/charts/ProgressStreak';  // Import the ProgressStreak component
-import { subjects } from '../data/subjects';
-
-// Example streak data (replace with real data as needed)
-const streak = [
-  { day: 'Monday', completed: true },
-  { day: 'Tuesday', completed: true },
-  { day: 'Wednesday', completed: true },
-  { day: 'Thursday', completed: false },
-  { day: 'Friday', completed: true },
-  { day: 'Saturday', completed: false },
-  { day: 'Sunday', completed: true },
-];
+import SubjectCard from "../components/cards/SubjectCard";
+import RocketLaunch from "../components/cards/RocketLaunch";
+import { subjects } from "../data/subjects";
+import "../App.css"; // This imports the global styles
 
 const Learning = () => {
   return (
-    <div className="space-y-8 px-8 py-4">
-      <h1 className="text-4xl font-bold text-gray-800 mb-6">Learning Journey 🚀</h1>
+    <div className="learning-container">
+      {/* Title */}
+      <h1 className="title">Learning Journey 🚀</h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="content-grid">
         {/* Left Column: Subject Cards */}
-        <div className="space-y-4">
+        <div className="subjects-container">
           {subjects.map((subject, index) => (
             <SubjectCard key={index} subject={subject} />
           ))}
         </div>
 
-        {/* Right Column: Progress Streak */}
-        <div className="flex justify-center items-center">
-          <ProgressStreak streak={streak} />
+        {/* Rocket Launch Animation */}
+        <div className="rocket-container">
+          <RocketLaunch />
         </div>
       </div>
     </div>
