@@ -1,4 +1,4 @@
-import React from "react";
+/* eslint-disable react/prop-types */
 import { PieChart, Pie, Cell, Legend, Tooltip } from "recharts";
 
 const SubjectPieChart = ({ data }) => (
