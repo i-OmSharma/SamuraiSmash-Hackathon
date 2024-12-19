@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
-import { auth } from "../firebase"; // Firebase auth
+import { auth } from "../firebase.js"; // Firebase auth
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
@@ -59,12 +59,12 @@ const SignIn = () => {
                   />
                 </div>
               </div>
+              <br />
               <button type="submit" className="btn btn-primary btn-block">
                 Sign In
               </button>
             </form>
             <div className="text-center mt-3">
-              <a href="/forgot-password">Forgot Password?</a>
             </div>
           </div>
         </div>
