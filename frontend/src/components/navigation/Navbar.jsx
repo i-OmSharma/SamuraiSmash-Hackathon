@@ -1,4 +1,3 @@
-
 import { BellIcon, CogIcon } from '@heroicons/react/outline';
 
 // eslint-disable-next-line react/prop-types
