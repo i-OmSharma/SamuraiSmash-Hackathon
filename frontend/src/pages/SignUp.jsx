@@ -4,6 +4,8 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
 import signUpImage from "../assets/create.png"; // Import the image
 
+//hello 
+
 const SignUp = () => {
   const navigate = useNavigate(); // React Router's navigate function
   const [error, setError] = useState(null);
