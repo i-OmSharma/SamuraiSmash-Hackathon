@@ -3,6 +3,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import connectDB from '../db/database.js';
 import authRoutes from '../routes/userAuth.routes.js';
+import lessonRoutes  from '../routes/lesson.routes.js';
 
 dotenv.config();
 
@@ -18,6 +19,7 @@ connectDB();
 
 // Routes
 app.use('/api/auth', authRoutes);
+app.use('/api/lesson', lessonRoutes);
 
 // Start server
 app.listen(PORT, () => {
