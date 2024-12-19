@@ -57,7 +57,7 @@ const WatchLearn = () => {
                 onClick={() => handleOpenLink(video.link)}
                 className="mt-4 bg-white text-teal-500 py-2 px-4 rounded-lg hover:bg-teal-100"
               >
-                Open Video
+                Start Video
               </button>
             </div>
           );

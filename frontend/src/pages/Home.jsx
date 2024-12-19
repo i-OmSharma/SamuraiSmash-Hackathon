@@ -35,7 +35,7 @@ const Home = () => {
   ];
 
   return (
-    <div className="flex flex-col lg:flex-row justify-center items-start p-8 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 transition-all duration-300">
+    <div className="flex flex-col lg:flex-row justify-center items-start p-8 bg-gradient-to-r from-indigo-200 via-purple-200 to-pink-200 transition-all duration-300">
       <div className="flex w-full max-w-7xl justify-between items-start space-x-8"> 
         
         {/* Left Column: Action Boxes */}
