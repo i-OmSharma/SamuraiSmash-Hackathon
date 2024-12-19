@@ -1,13 +1,13 @@
-
-import "./RocketLaunch.css";
+import "../../App.css";
 
 const RocketLaunch = () => {
   return (
-    <div className="card-container">
-      <div className="launch-area">
-        <div className="rocket">🚀</div>
-        <div className="smoke"></div>
-      </div>
+    <div className="rocket-launch-wrapper">
+      <img 
+        src="/src/assets/rocket-launch.gif" 
+        alt="Rocket Launch" 
+        className="rocket-gif" 
+      />
     </div>
   );
 };

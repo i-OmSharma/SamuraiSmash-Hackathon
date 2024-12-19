@@ -14,23 +14,24 @@ const Home = () => {
 
   const actions = [
     { 
-      title: 'Watch & Learn', 
-      icon: <BookOpenIcon className="h-12 w-12 text-white" />, 
-      color: 'bg-teal-500',
-      link: '/watch-learn'
+      title: 'Play & Learn',  
+      icon: <PlayIcon className="h-12 w-12 text-white" />, 
+      color: 'bg-gradient-to-r from-blue-500 to-indigo-500', // Gradient from blue to indigo
+      link: '/play-learn'
     },
     { 
       title: 'Quiz Time', 
       icon: <PuzzleIcon className="h-12 w-12 text-white" />, 
-      color: 'bg-orange-500',
+      color: 'bg-gradient-to-r from-orange-500 to-red-500', // Gradient from orange to red
       link: '/quiz-time'
     },
     { 
-      title: 'Play & Learn',  
-      icon: <PlayIcon className="h-12 w-12 text-white" />, 
-      color: 'bg-blue-500' ,
-      link: '/play-learn'
-    },
+      title: 'Watch & Learn', 
+      icon: <BookOpenIcon className="h-12 w-12 text-white" />, 
+      color: 'bg-gradient-to-r from-teal-500 to-green-500', // Gradient from teal to green
+      link: '/watch-learn'
+    }
+    
   ];
 
   return (

@@ -8,7 +8,8 @@ const Schedule = () => {
         { time: '09:00 AM', subject: 'Numbers Practice', duration: '45 min' },
         { time: '10:00 AM', subject: 'Break', duration: '15 min' },
         { time: '10:15 AM', subject: 'Alphabet Learning', duration: '45 min' },
-      ]
+      ],
+      bgColor: 'bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500',
     },
     {
       day: 'Wednesday',
@@ -16,7 +17,8 @@ const Schedule = () => {
         { time: '09:00 AM', subject: 'Sign Language Basics', duration: '45 min' },
         { time: '10:00 AM', subject: 'Break', duration: '15 min' },
         { time: '10:15 AM', subject: 'Interactive Games', duration: '45 min' },
-      ]
+      ],
+      bgColor: 'bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500',
     },
     {
       day: 'Friday',
@@ -24,7 +26,8 @@ const Schedule = () => {
         { time: '09:00 AM', subject: 'Greetings Practice', duration: '45 min' },
         { time: '10:00 AM', subject: 'Break', duration: '15 min' },
         { time: '10:15 AM', subject: 'Progress Assessment', duration: '45 min' },
-      ]
+      ],
+      bgColor: 'bg-gradient-to-r from-green-500 via-teal-500 to-blue-400',
     },
   ];
 
@@ -39,12 +42,12 @@ const Schedule = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: dayIndex * 0.2 }}
-            className="bg-white rounded-xl shadow-lg overflow-hidden"
+            className={`rounded-xl shadow-lg overflow-hidden ${day.bgColor}`}
           >
-            <div className="bg-primary text-white p-4">
+            <div className="p-4 text-white">
               <h2 className="text-xl font-bold">{day.day}</h2>
             </div>
-            <div className="p-4">
+            <div className="bg-white p-4">
               {day.activities.map((activity, actIndex) => (
                 <div
                   key={actIndex}
@@ -67,6 +70,6 @@ const Schedule = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Schedule;

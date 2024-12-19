@@ -12,7 +12,12 @@ const Sidebar = () => {
   ];
 
   return (
-    <div className="w-64 bg-white shadow-lg">
+    <div
+      className="w-64 shadow-lg"
+      style={{
+        background: 'linear-gradient(to top, #ffe4f7, #d0f0ff)', // Light pinkish with blue touch
+      }}
+    >
       <div className="p-6">
         <div className="flex items-center space-x-2">
           <BookOpen className="w-8 h-8 text-indigo-600" />
@@ -24,8 +29,10 @@ const Sidebar = () => {
             <NavLink
               key={item.path}
               to={item.path}
-              className={({ isActive }) => 
-                `${isActive ? 'bg-primary text-white' : 'text-gray-600'} flex items-center p-3 mb-4 rounded-lg transition-all duration-300 hover:bg-primary hover:text-white`
+              className={({ isActive }) =>
+                `${
+                  isActive ? 'bg-indigo-800 text-white' : 'text-gray-800'
+                } flex items-center p-3 mb-4 rounded-lg transition-all duration-300 hover:bg-indigo-600 hover:text-white`
               }
             >
               <span className="text-xl mr-4">{item.icon}</span>
@@ -36,6 +43,6 @@ const Sidebar = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Sidebar;
