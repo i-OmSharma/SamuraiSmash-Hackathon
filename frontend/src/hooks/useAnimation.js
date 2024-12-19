@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useAnimation as useFramerAnimation } from 'framer-motion';
 
-export const useAnimation = (inView, variants) => {
+export const useAnimation = (inView) => {
   const controls = useFramerAnimation();
 
   useEffect(() => {

@@ -1,7 +1,7 @@
 import SubjectCard from "../components/cards/SubjectCard";
 import RocketLaunch from "../components/cards/RocketLaunch";
 import { subjects } from "../data/subjects";
-import "../App.css"; // This imports the global styles
+import "../App.css";
 
 const Learning = () => {
   return (
@@ -17,7 +17,7 @@ const Learning = () => {
           ))}
         </div>
 
-        {/* Rocket Launch Animation */}
+        {/* Rocket GIF on the Right */}
         <div className="rocket-container">
           <RocketLaunch />
         </div>

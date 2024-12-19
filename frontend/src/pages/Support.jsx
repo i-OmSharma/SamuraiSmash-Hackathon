@@ -24,26 +24,31 @@ const Support = () => {
   ];
 
   return (
-    <div className="space-y-8">
-      <h1 className="text-4xl font-bold text-gray-800">Support & Help 💡</h1>
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 p-8">
+      <h1 className="text-4xl font-bold text-gray-800 text-center mb-8">
+        Support & Help 💡
+      </h1>
 
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        {/* FAQ Section */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="bg-white rounded-xl shadow-lg p-6"
+          className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300"
         >
-          <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
-          <div className="space-y-4">
+          <h2 className="text-3xl font-bold text-gradient mb-6">
+            Frequently Asked Questions
+          </h2>
+          <div className="space-y-6">
             {faqs.map((faq, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: index * 0.2 }}
-                className="p-4 border rounded-lg hover:border-primary transition-colors duration-300"
+                className="p-4 bg-gradient-to-r from-blue-100 to-purple-100 rounded-lg shadow-md hover:shadow-lg transition-transform transform hover:scale-105"
               >
-                <h3 className="font-semibold text-lg text-primary mb-2">
+                <h3 className="font-semibold text-lg text-blue-800 mb-2">
                   {faq.question}
                 </h3>
                 <p className="text-gray-600">{faq.answer}</p>
@@ -52,34 +57,46 @@ const Support = () => {
           </div>
         </motion.div>
 
-        <div className="space-y-6">
+        {/* Contact Us & Team Section */}
+        <div className="space-y-8">
+          {/* Contact Us */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="bg-white rounded-xl shadow-lg p-6"
+            className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300"
           >
-            <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
+            <h2 className="text-3xl font-bold text-gradient mb-6">
+              Contact Us
+            </h2>
             <div className="space-y-4">
-              <p className="flex items-center text-gray-600">
-                <span className="mr-2">📧</span> support@learnsign.edu
+              <p className="flex items-center text-gray-700 text-lg">
+                <span className="mr-3 text-indigo-500">📧</span>
+                support@learnsign.edu
               </p>
-              <p className="flex items-center text-gray-600">
-                <span className="mr-2">📞</span> +1 (555) 123-4567
+              <p className="flex items-center text-gray-700 text-lg">
+                <span className="mr-3 text-green-500">📞</span>
+                +1 (555) 123-4567
               </p>
             </div>
           </motion.div>
 
+          {/* Our Team */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2 }}
-            className="bg-white rounded-xl shadow-lg p-6"
+            className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300"
           >
-            <h2 className="text-2xl font-bold mb-4">Our Team</h2>
+            <h2 className="text-3xl font-bold text-gradient mb-6">
+              Our Team
+            </h2>
             <div className="grid grid-cols-2 gap-4">
               {team.map((member, index) => (
-                <div key={index} className="text-center p-4">
-                  <p className="font-semibold text-primary">{member.name}</p>
+                <div
+                  key={index}
+                  className="text-center p-4 bg-gradient-to-r from-yellow-100 to-pink-100 rounded-lg shadow-md hover:shadow-lg transition-transform transform hover:scale-105"
+                >
+                  <p className="font-semibold text-indigo-800">{member.name}</p>
                   <p className="text-sm text-gray-600">{member.role}</p>
                 </div>
               ))}
@@ -89,6 +106,6 @@ const Support = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Support;
